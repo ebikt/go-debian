@@ -27,7 +27,7 @@ import (
 	"strings"
 	"testing"
 
-	"pault.ag/go/debian/changelog"
+	"github.com/ebikt/go-debian/changelog"
 )
 
 /*

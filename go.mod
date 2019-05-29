@@ -1,4 +1,4 @@
-module pault.ag/go/debian
+module github.com/ebikt/go-debian
 
 require (
 	github.com/kjk/lzma v0.0.0-20161016003348-3fd93898850d

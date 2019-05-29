@@ -1,4 +1,4 @@
-package hashio // import "pault.ag/go/debian/hashio"
+package hashio // import "github.com/ebikt/go-debian/hashio"
 
 import (
 	"fmt"

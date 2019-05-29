@@ -3,4 +3,4 @@
 Parse the Debian changelog format.
 
 */
-package changelog // import "pault.ag/go/debian/changelog"
+package changelog // import "github.com/ebikt/go-debian/changelog"

@@ -25,7 +25,7 @@ import (
 	"strings"
 	"testing"
 
-	"pault.ag/go/debian/control"
+	"github.com/ebikt/go-debian/control"
 )
 
 func TestSourceIndexParse(t *testing.T) {

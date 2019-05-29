@@ -23,8 +23,8 @@ package dependency_test
 import (
 	"testing"
 
-	"pault.ag/go/debian/dependency"
-	"pault.ag/go/debian/version"
+	"github.com/ebikt/go-debian/dependency"
+	"github.com/ebikt/go-debian/version"
 )
 
 /*
