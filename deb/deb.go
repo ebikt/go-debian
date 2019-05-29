@@ -46,7 +46,7 @@ type Control struct {
 	Source        string
 	Version       version.Version `required:"true"`
 	Architecture  dependency.Arch `required:"true"`
-	Maintainer    string          `required:"true"`
+	Maintainer    string
 	InstalledSize int             `control:"Installed-Size"`
 	MultiArch     string          `control:"Multi-Arch"`
 	Depends       dependency.Dependency
@@ -58,7 +58,7 @@ type Control struct {
 	Section       string
 	Priority      string
 	Homepage      string
-	Description   string `required:"true"`
+	Description   string
 }
 
 func (c Control) SourceName() string {
@@ -80,6 +80,8 @@ type Deb struct {
 	Control Control
 	Path    string
 	Data    *tar.Reader
+	ControlExt  string
+	DataExt	    string
 }
 
 // Load {{{
@@ -197,6 +199,7 @@ func loadDeb2Control(archive *Ar, deb *Deb) error {
 			if err != nil {
 				return err
 			}
+			deb.ControlExt = member.Name[8:len(member.Name)]
 			for {
 				member, err := archive.Next()
 				if err != nil {
@@ -230,6 +233,7 @@ func loadDeb2Data(archive *Ar, deb *Deb) error {
 			if err != nil {
 				return err
 			}
+			deb.DataExt = member.Name[5:len(member.Name)]
 			deb.Data = archive
 			return nil
 		}
